@@ -56,11 +56,10 @@ async def start_handler(bot: Client, m: Message):
         quote=True,
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("Developer - @AbirHasan2005", url="https://t.me/AbirHasan2005")],
-                [InlineKeyboardButton("Support Group", url="https://t.me/linux_repo"),
-                 InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates")],
-                [InlineKeyboardButton("Open Settings", callback_data="openSettings")],
-                [InlineKeyboardButton("Close", callback_data="closeMeh")]
+                [InlineKeyboardButton("🤖 Update Channel", url="https://t.me/BX_Botz"),
+                 InlineKeyboardButton("👥Support Group", url="https://t.me/BxSupport")],
+                [InlineKeyboardButton("⚙️Settings", callback_data="openSettings"),
+                 InlineKeyboardButton("👲 Developer", url="https://t.me/Mufaz123")]
             ]
         )
     )
@@ -350,7 +349,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 return
             except Exception:
                 await cb.message.edit(
-                    text="Something went Wrong. Contact my [Support Group](https://t.me/linux_repo).",
+                    text="Something went Wrong. Contact my [Support Group](https://t.me/BxSupport).",
                     parse_mode="markdown",
                     disable_web_page_preview=True
                 )
@@ -358,7 +357,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
         await cb.message.edit(
             text=Config.START_TEXT,
             parse_mode="Markdown",
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Developer - @AbirHasan2005", url="https://t.me/AbirHasan2005"), InlineKeyboardButton("Support Group", url="https://t.me/linux_repo")], [InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates")]]),
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🤖 Update Channel", url="https://t.me/BX_Botz"), InlineKeyboardButton("👥Support Group", url="https://t.me/BxSupport")], [InlineKeyboardButton("⚙️Settings", callback_data="openSettings"), InlineKeyboardButton("👲 Developer", url="https://t.me/Mufaz123")]]),
             disable_web_page_preview=True
         )
     elif "showThumbnail" in cb.data:
