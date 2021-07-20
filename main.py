@@ -326,7 +326,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 user = await bot.get_chat_member(chat_id=(int(Config.UPDATES_CHANNEL) if Config.UPDATES_CHANNEL.startswith("-100") else Config.UPDATES_CHANNEL), user_id=cb.message.chat.id)
                 if user.status == "kicked":
                     await cb.message.edit(
-                        text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/linux_repo).",
+                        text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/BXSUPPORT).",
                         parse_mode="markdown",
                         disable_web_page_preview=True
                     )
@@ -427,7 +427,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
         if (QueueDB.get(cb.from_user.id, None) is None) or (QueueDB.get(cb.from_user.id) == []):
             await cb.answer("Sorry Unkil, Your Queue is Empty!", show_alert=True)
             return
-        merged_vid_path = f"{Config.DOWN_PATH}/{str(cb.from_user.id)}/[@AbirHasan2005]_Merged.{FormtDB.get(cb.from_user.id).lower()}"
+        merged_vid_path = f"{Config.DOWN_PATH}/{str(cb.from_user.id)}/[@BX_Botz]_Merged.{FormtDB.get(cb.from_user.id).lower()}"
         if cb.data.split("_", 1)[-1] == "Yes":
             await cb.message.edit("Okay Unkil,\nSend me new file name!")
             try:
