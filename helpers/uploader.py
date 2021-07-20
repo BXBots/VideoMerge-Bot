@@ -24,15 +24,16 @@ async def UploadVideo(bot: Client, cb: CallbackQuery, merged_vid_path: str, widt
                 caption=Config.CAPTION.format((await bot.get_me()).username) + f"\n\n**File Name:** `{merged_vid_path.rsplit('/', 1)[-1]}`\n**Duration:** `{format_timespan(duration)}`\n**File Size:** `{humanbytes(file_size)}`",
                 progress=progress_for_pyrogram,
                 progress_args=(
-                    "Uploading Video ...",
+                    "📤 Uploading...",
                     cb.message,
                     c_time
                 ),
                 reply_markup=InlineKeyboardMarkup(
                     [
-                        [InlineKeyboardButton("Developer - @AbirHasan2005", url="https://t.me/AbirHasan2005")],
-                        [InlineKeyboardButton("Support Group", url="https://t.me/linux_repo"),
-                         InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates")]
+                        [InlineKeyboardButton("🤖 Update Channel", url="https://t.me/BX_Botz"),
+                         InlineKeyboardButton("👥Support Group", url="https://t.me/BxSupport")],
+                        [InlineKeyboardButton("⚙️Settings", callback_data="openSettings"),
+                        InlineKeyboardButton("👲 Developer", url="https://t.me/Mufaz123"))]
                     ]
                 )
             )
@@ -45,15 +46,16 @@ async def UploadVideo(bot: Client, cb: CallbackQuery, merged_vid_path: str, widt
                 thumb=video_thumbnail,
                 progress=progress_for_pyrogram,
                 progress_args=(
-                    "Uploading Video ...",
+                    "📤 Uploading...",
                     cb.message,
                     c_time
                 ),
                 reply_markup=InlineKeyboardMarkup(
                     [
-                        [InlineKeyboardButton("Developer - @AbirHasan2005", url="https://t.me/AbirHasan2005")],
-                        [InlineKeyboardButton("Support Group", url="https://t.me/linux_repo"),
-                         InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates")]
+                        [InlineKeyboardButton("🤖 Update Channel", url="https://t.me/BX_Botz"),
+                         InlineKeyboardButton("👥Support Group", url="https://t.me/BxSupport")],
+                        [InlineKeyboardButton("⚙️Settings", callback_data="openSettings"),
+                         InlineKeyboardButton("👲 Developer", url="https://t.me/Mufaz123")]
                     ]
                 )
             )
