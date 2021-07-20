@@ -33,7 +33,7 @@ async def UploadVideo(bot: Client, cb: CallbackQuery, merged_vid_path: str, widt
                         [InlineKeyboardButton("🤖 Update Channel", url="https://t.me/BX_Botz"),
                          InlineKeyboardButton("👥Support Group", url="https://t.me/BxSupport")],
                         [InlineKeyboardButton("⚙️Settings", callback_data="openSettings"),
-                        InlineKeyboardButton("👲 Developer", url="https://t.me/Mufaz123"))]
+                         InlineKeyboardButton("👲 Developer", url="https://t.me/Mufaz123"))]
                     ]
                 )
             )
